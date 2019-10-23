@@ -6,7 +6,9 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
+# settings are necessary for eclipse to recognize
+# this as a webapp
+# .settings/
 .loadpath
 .recommenders
 
