@@ -131,10 +131,12 @@ server environment.
 
 \section*{Getting Started}
 
-\textbf{Note:} Unless you are familiar with Java Applications Servers 
-and have one installed on your laptop, you will need to use the lab 
-computers for this lab.  In addition, it would be a good idea to reset 
-your Albums database by rerunning the SQL script from a prior lab.
+\textbf{Note:} For this lab, you will need to use the JEE (Java 
+Enterprise Edition) version of Eclipse, not the JSE (Java Standard 
+Edition).  If you have this installed you should be able to use your
+own machine, but if not you will need to use one of the lab computers.
+In addition, it would be a good idea to reset your Albums database 
+by rerunning the SQL script from a prior lab.
 
 For this lab, you will need to use the JEE (Java Enterprise Edition) 
 version of Eclipse, not the JSE (Java Standard Edition).  In Windows, 
@@ -142,26 +144,9 @@ click the start menu and enter ``Eclipse'', the ``Java EE Eclipse''
 should show up, select this version.  You may use the same workspace 
 as with the JSE (Java Standard Edition) version of Eclipse.
 
-Alternatively (and recommended) you can use the Eclipse version in the 
-Linux partition, which will enable you to deploy locally to your lab 
-machine instead of the csce server.  To use this version of Eclipse: 
-
-\begin{enumerate}
-  \item Restart your lab computer and choose openSUSE.   Login with 
-    your usual CSE credentials.
-  \item Once logged into Linux, go to ``Applications'' $\rightarrow$ 
-  	``Search'' and open up a ``Terminal''
-  \item Launch eclipse by executing 
-	
-	\mintinline{text}{/usr/local/bin/eclipse &}
-	
-	(the ampersand launches Eclipse in the background so you can 
-	still use the terminal session)
-\end{enumerate}
-
-Once you've got Eclipse running, clone the project code for this lab 
-from GitHub using the URL, \url{https://github.com/cbourke/CSCE156-Lab09}.  Refer to Lab 1.0 for instructions on how to clone a 
-project from GitHub.	
+Clone the project code for this lab from GitHub using the URL, 
+\url{https://github.com/cbourke/CSCE156-Lab09}.  Refer to Lab 
+1.0 for instructions on how to clone a project from GitHub.	
 
 \section*{Activities}
 
@@ -204,80 +189,28 @@ project from GitHub.
     \end{itemize}
 \end{enumerate}
     
-\subsection*{Deploying Your Application}
+\subsection*{Running Your Application}
 
-You have two options for deploying your application as a Web Archive (WAR) 
-file to an application server.  
-
-\subsubsection*{Linux: Deploying Locally}
-
-If you chose to do this lab in the Linux version, then follow these instructions.
+When working with a Java Web Application you generally build
+a Web Archive (WAR) file and \emph{deploy} it to an application server.  
+For this lab, we'll ``deploy'' locally using Eclipse.  To start
+your application follow these instructions.
 
 \begin{enumerate}
-  \item Right click your project and select ``Export\ldots'', select 
-	``Web'', ``WAR file'', ``Next''
-  \item Click Browse and select a directory (your home directory is 
-	recommended) and file to export to; name the file 
-	\mintinline{text}{loginLab09.war} where \mintinline{text}{login}
-	is replaced by your cse login.
-  \item Return to your terminal and copy the WAR file to glassfish's 
-    autodeploy directory:
-    
-	\mintinline{text}{cp loginLab09.war ~glassfish/domains/domain1/autodeply}
- 
-  \item Open a web browser (``Applications'' $\rightarrow$ ``Firefox'') 
-    and go to the following url: \url{http://localhost:8080/loginLab09}
-    where login is replaced with your CSE login.
-\end{enumerate}
-
-\subsubsection*{Windows: Deploying to CSCE}
-
-If you chose to do this lab in the Windows version, then follow these 
-instructions.
-
-\begin{enumerate}
-  \item Export your application in a Web Archive File (WAR): right 
-    click your project and choose ``Export'' $\rightarrow$ ``Export\ldots'' 
-    $\rightarrow$ ``Web'' $\rightarrow$ ``WAR file''
-  \item Click ``Browse'' and select a directory to export it to, name 
-    the file \mintinline{text}{loginLab09.war} where \mintinline{text}{login}
-    is replaced by your cse login.  The file should now be in the directory
-    you selected.
-  \item Copy the WAR file to the root of your CSE directory (copy it to 
-    your Z: drive) 
-  \item SSH (PuTTY) into \mintinline{text}{csce.unl.edu} (\emph{not} 
-    \mintinline{text}{cse.unl.edu}) using your cse login
-  \item Copy the war file to the server's glassfish auto deploy 
-  	directory with the command
-	
-	\mintinline{text}{cp loginLab09.war ~glassfish/glassfish/domains/domain1/autodeploy/}
-	
-  \item Make sure that the file has proper permissions by executing 
-    the following from the command line:
-    
-    \mintinline{text}{chmod 755 ~glassfish/glassfish/domains/domain1/autodeploy/loginLab09.war}
-    
-    where, \mintinline{text}{login} is replaced by your cse login.
-    If necessary, you may need to give glassfish a kick in the butt
-    by executing:
-    
-    \mintinline{text}{touch ~glassfish/glassfish/domains/domain1/autodeploy/loginLab09.war}
-        
-  \item Open a web browser and go to the following URL:
-    \url{http://csce.unl.edu:8080/loginLab09/} where 
-    \mintinline{text}{login} is replaced by your CSE login.
-    Unless there were problems with your code, the webapp should now work, 
-    you can click on album titles or bands to be taken to another page 
-    that gives further details.
+  \item Change to the ``Java EE'' perspective in Eclipse
+  \item Right click your project and select ``Run As'' 
+  $\rightarrow$ ``Run on Server''
+  \item Select ``J2EE Preview as localhost''
+  \item After a brief startup, a preview browser window 
+  should appear and you can interact with your application.
+  \item To stop the server, hit the stop button in the terminal
+  \item You may need to restart the server if you make any
+  changes to your code.
 \end{enumerate}
 
 \subsection*{Completing Your Lab}
 
 Complete the worksheet and have your lab instructor sign off on it.
-Before you leave, make sure you ``undeploy'' your web app by deleting 
-the WAR file from the glassfish autodeploy directory:
-
-\mintinline{text}{rm ~glassfish/glassfish/domains/domain1/autodeploy/loginLab09.war}
 
 \section*{Advanced Activities (Optional)}
 
