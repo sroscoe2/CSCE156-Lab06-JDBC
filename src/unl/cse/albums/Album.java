@@ -64,7 +64,7 @@ public class Album {
 	 */
 	public static Album getDetailedAlbum(int albumId) {
 
-		//TODO
+		//TODO in Lab 09
 		return null;
 	}
 	
@@ -84,7 +84,7 @@ public class Album {
 	 */
 	public static List<Album> getAlbumSummaries() {
 		
-		//TODO
+		//TODO in Lab 09
 		return null;
 		
 	}
