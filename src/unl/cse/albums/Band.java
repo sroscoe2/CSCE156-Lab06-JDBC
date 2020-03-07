@@ -133,7 +133,7 @@ public class Band {
 	
 	@Override
     	public boolean equals(Object obj) {
-        	if (obj instanceof Band) {
+        	if (obj instanceof Band && bandId != null) {
             		return bandId.equals(((Band) obj).bandId);
         	}
         	return false;
