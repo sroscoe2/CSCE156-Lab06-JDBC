@@ -130,6 +130,14 @@ public class Band {
 		}
 		return b;
 	}
+	
+	@Override
+    	public boolean equals(Object obj) {
+        	if (obj instanceof Band) {
+            		return bandId.equals(((Band) obj).bandId);
+        	}
+        	return false;
+    	}
 
 	@Override
 	public String toString() {
