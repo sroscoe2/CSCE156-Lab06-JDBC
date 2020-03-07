@@ -130,6 +130,19 @@ public class Band {
 		}
 		return b;
 	}
+	
+	@Override
+	public int hashCode() {
+		return bandId != null ? bandId.hashCode() : 0;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Band && bandId != null) {
+			return bandId.equals(((Band) obj).bandId);
+		}
+		return false;
+	}
 
 	@Override
 	public String toString() {
