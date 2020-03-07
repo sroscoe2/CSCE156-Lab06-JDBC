@@ -132,12 +132,17 @@ public class Band {
 	}
 	
 	@Override
-    	public boolean equals(Object obj) {
-        	if (obj instanceof Band && bandId != null) {
-            		return bandId.equals(((Band) obj).bandId);
-        	}
-        	return false;
-    	}
+	public int hashCode() {
+		return bandId != null ? bandId.hashCode() : 0;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Band && bandId != null) {
+			return bandId.equals(((Band) obj).bandId);
+		}
+		return false;
+	}
 
 	@Override
 	public String toString() {
