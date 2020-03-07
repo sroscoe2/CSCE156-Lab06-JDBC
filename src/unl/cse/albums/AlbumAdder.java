@@ -14,7 +14,7 @@ public class AlbumAdder {
 	 */
 	public static boolean addAlbumToDatabase(String albumTitle, String bandName, String albumYear, String albumNumber) {
 
-		//TODO
+		//TODO in Lab 10
 		return false;
 
 	}
