@@ -23,7 +23,7 @@
   }
   Band b = Band.getBand(bandId);
   
-  List<Album> bandAlbums = Album.getAlbumSummaries().stream().filter(a -> a.getBand().equals(b)).sorted(Comparator.comparingInt(Album::getYear)).collect(Collectors.toUnmodifiableList());
+  List<Album> bandAlbums = Album.getAlbumSummaries().stream().filter(a -> a.getBand().equals(b)).sorted(Comparator.comparingInt(Album::getYear)).collect(Collectors.toList());
 %>
 <h1><%=b.getName()%></h1>
 
