@@ -29,6 +29,14 @@ public class AlbumDetailServlet extends HttpServlet{
 		response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		
 		Album a = Album.getDetailedAlbum(albumId);
+		if(a == null) {
+			try {
+				//alright alright alright
+				response.sendError(420);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
 	    JsonElement je = gson.toJsonTree(a);
 	    JsonObject jo = new JsonObject();
 	    jo.add("album", je);
