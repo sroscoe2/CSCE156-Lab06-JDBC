@@ -29,6 +29,7 @@ public class AlbumTests {
 		int expectedNumberOfAlbums = 5;
 
 		List<Album> actual = Album.getAlbumSummaries();
+		Assertions.assertNotNull(actual);
 		Assertions.assertTrue(actual.contains(expectedAlbum01),
 				"Database appears to be missing " + expectedAlbum01 + " or getAlbumSummaries() does not include it");
 		Assertions.assertTrue(actual.contains(expectedAlbum02),
