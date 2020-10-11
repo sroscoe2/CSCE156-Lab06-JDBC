@@ -128,7 +128,27 @@ Tomcat, JBoss or Glassfish).  However, for this lab it will be enough
 to *preview* your webapp on your own local computer.  To do this, 
 take the following steps.
 
-1.  TODO
+1.  Make sure to select your project (not any folders or files in it) 
+    in the project explorer.
+    
+2.  Click "play" button like normal, but a "Run As" dialog box should 
+    popup.  Select "Run on Server" and "OK".
+    
+3.  Under "Basic" select "J2EE Preview" and click "Finish"
+
+This process will launch a local (but bare bones) web server and should
+launch a basic web browser in Eclipse.  You can interact with your 
+webapp through eclipse or you can open your favorite web browser and 
+go to <http://localhost:8080/CSCE156-Lab09/> to do so.
+
+*   If your code is correct, the contents of your database should be
+    displayed (after loading) in a table.  Clicking on an album title
+    should take you to a page displaying the details of that album 
+    (a full track listing).  If not, there may be something wrong with
+    your code.
+    
+*   Clicking on a band will likely not work with the J2EE Preview as it
+    is a Java Servlet Page (JSP) and requires a full Java webapp server.     
 
 ## 4. Testing, Submitting & Grading
 
