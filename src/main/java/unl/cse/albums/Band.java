@@ -52,23 +52,6 @@ public class Band {
 	public static Band getBand(int bandId) {
 		Band b = null;
 		
-		//TODO: update driver and test removal for all driver loads
-//		try {
-//			Class.forName("com.mysql.jdbc.Driver").newInstance();
-//		} catch (InstantiationException e) {
-//			System.out.println("InstantiationException: ");
-//			e.printStackTrace();
-//			throw new RuntimeException(e);
-//		} catch (IllegalAccessException e) {
-//			System.out.println("IllegalAccessException: ");
-//			e.printStackTrace();
-//			throw new RuntimeException(e);
-//		} catch (ClassNotFoundException e) {
-//			System.out.println("ClassNotFoundException: ");
-//			e.printStackTrace();
-//			throw new RuntimeException(e);
-//		}
-		
 		Connection conn = null;
 
 		try {
