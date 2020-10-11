@@ -25,6 +25,12 @@ public class Album {
 	public Album(String title, Integer year, String bandName) {
 		this(null, title, year, new Band(bandName), null);
 	}
+	
+	public Album(Integer albumId, String title) {
+		super();
+		this.albumId = albumId;
+		this.title = title;
+	}
 
 	public Integer getAlbumId() {
 		return albumId;
@@ -63,7 +69,6 @@ public class Album {
 	 * @return
 	 */
 	public static Album getDetailedAlbum(int albumId) {
-
 		//TODO in Lab 09
 		return null;
 	}
@@ -83,18 +88,46 @@ public class Album {
 	 * @return
 	 */
 	public static List<Album> getAlbumSummaries() {
-		
 		//TODO in Lab 09
-		return null;
-		
+		return null;		
 	}
 
 	@Override
 	public String toString() {
-		return "Album [albumId=" + albumId + ", title=" + title + ", year="
-				+ year + ", band=" + band + ", albumNumber=" + albumNumber
-				+ ", songTitles=" + songTitles + "]";
+		return title + " (id = " + albumId + ")";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((albumId == null) ? 0 : albumId.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Album other = (Album) obj;
+		if (albumId == null) {
+			if (other.albumId != null)
+				return false;
+		} else if (!albumId.equals(other.albumId))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
+
 	
 	
 	

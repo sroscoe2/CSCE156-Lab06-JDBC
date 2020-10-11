@@ -52,26 +52,27 @@ public class Band {
 	public static Band getBand(int bandId) {
 		Band b = null;
 		
-		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-		} catch (InstantiationException e) {
-			System.out.println("InstantiationException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (IllegalAccessException e) {
-			System.out.println("IllegalAccessException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (ClassNotFoundException e) {
-			System.out.println("ClassNotFoundException: ");
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		}
+		//TODO: update driver and test removal for all driver loads
+//		try {
+//			Class.forName("com.mysql.jdbc.Driver").newInstance();
+//		} catch (InstantiationException e) {
+//			System.out.println("InstantiationException: ");
+//			e.printStackTrace();
+//			throw new RuntimeException(e);
+//		} catch (IllegalAccessException e) {
+//			System.out.println("IllegalAccessException: ");
+//			e.printStackTrace();
+//			throw new RuntimeException(e);
+//		} catch (ClassNotFoundException e) {
+//			System.out.println("ClassNotFoundException: ");
+//			e.printStackTrace();
+//			throw new RuntimeException(e);
+//		}
 		
 		Connection conn = null;
 
 		try {
-			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+			conn = DriverManager.getConnection(DatabaseInfo.URL, DatabaseInfo.USERNAME, DatabaseInfo.PASSWORD);
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
 			e.printStackTrace();
