@@ -60,6 +60,15 @@ lab.
 
 ## 1. Getting Started
 
+Clone the project code for this lab from GitHub using the URL,
+<https://github.com/cbourke/CSCE156-Lab09>. Refer to Lab 1.0 for
+instructions on how to clone a project from GitHub.
+
+***Note*** Be sure that the Albums database is installed and includes
+the data from the SQL scripts from prior labs.
+
+## 2. Overview 
+
 In this lab you will familiarize yourself with the Java Database
 Connectivity API (JDBC) by finishing a simple, nearly complete
 retrieve-and-display web application. The design of the webapp is 
@@ -70,13 +79,6 @@ It is not necessary to understand the details of the application (the
 HTML, JavaScript, Servlets, or application server). The main goal of
 this lab is to give you some familiarity with JDBC and exposure to a
 multi-tiered application and web application server environment.
-
-Clone the project code for this lab from GitHub using the URL,
-<https://github.com/cbourke/CSCE156-Lab09>. Refer to Lab 1.0 for
-instructions on how to clone a project from GitHub.
-
-***Note*** Be sure that the Albums database is installed and includes
-the data from the SQL scripts from prior labs.
 
 ## 3. Activities
 
