@@ -24,11 +24,11 @@ public class AlbumTests {
 		Album expectedAlbum01 = new Album(1, "The Velvet Underground & Nico");
 		Album expectedAlbum02 = new Album(2, "Bleach");
 		Album expectedAlbum03 = new Album(3, "Nevermind");
-		Album expectedAlbum04 = new Album(6, "Mule Variations");
+		Album expectedAlbum04 = new Album(5, "Rain Dogs");
 		Album expectedAlbum05 = new Album(103, "Help!");
 		int expectedNumberOfAlbums = 5;
-
 		List<Album> actual = Album.getAlbumSummaries();
+
 		Assertions.assertNotNull(actual);
 		Assertions.assertTrue(actual.contains(expectedAlbum01),
 				"Database appears to be missing " + expectedAlbum01 + " or getAlbumSummaries() does not include it");
