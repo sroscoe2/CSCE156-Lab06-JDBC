@@ -63,7 +63,9 @@ public class Album {
 	/**
 	 * This method returns a {@link #Album} instance loaded from the 
 	 * database corresponding to the given <code>albumId</code>.  
-	 * Throws an {@link IllegalStateException} upon an invalid <code>albumId</code>.
+	 * Returns <code>null</code> if the <code>albumId</code> is
+	 * invalid.
+	 * 
 	 * All fields are loaded with this method.
 	 * @param albumId
 	 * @return
@@ -89,7 +91,7 @@ public class Album {
 	 */
 	public static List<Album> getAlbumSummaries() {
 		//TODO in Lab 09
-		return null;		
+		return null;
 	}
 
 	@Override
