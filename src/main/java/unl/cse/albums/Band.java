@@ -63,7 +63,7 @@ public class Band {
 		}
 		
 
-		String query = "SELECT name FROM Band where bandId = ?";
+		String query = "SELECT name FROM Band WHERE bandId = ?";
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
