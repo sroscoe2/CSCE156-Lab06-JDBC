@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * This is a suite of tests for the {@link #Album} class.
@@ -19,7 +19,7 @@ public class AlbumTests {
 	 * 
 	 */
 	@Test
-	void getAlbumSummariesTest() {
+	public void getAlbumSummariesTest() {
 
 		Album expectedAlbum01 = new Album(1, "The Velvet Underground & Nico");
 		Album expectedAlbum02 = new Album(2, "Bleach");
@@ -52,7 +52,7 @@ public class AlbumTests {
 	 * 
 	 */
 	@Test
-	void getDetailedAlbumTest01() {
+	public void getDetailedAlbumTest01() {
 
 		List<String> expectedSongs = Arrays.asList("Singapore", "Clap Hands", "Cemetery Polka",
 				"Jockey Full of Bourbon", "Tango Till They're Sore", "Big Black Mariah", "Diamonds & Gold",
@@ -78,7 +78,7 @@ public class AlbumTests {
 	 * 
 	 */
 	@Test
-	void getDetailedAlbumTest02() {
+	public void getDetailedAlbumTest02() {
 
 		List<String> expectedSongs = Arrays.asList(
 
@@ -104,7 +104,7 @@ public class AlbumTests {
 	 * 
 	 */
 	@Test
-	void getDetailedAlbumTest03() {
+	public void getDetailedAlbumTest03() {
 
 		List<String> expectedSongs = Arrays.asList("I Am Colossus", "The Demons Name Is Surveillance",
 				"Do Not Look Down", "Behind The Sun", "The Hurt That Finds You First", "Marrow",
