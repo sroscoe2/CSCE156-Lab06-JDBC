@@ -9,21 +9,18 @@ public class Album {
 	private String title;
 	private Integer year;
 	private Band band;
-	private Integer albumNumber;
 	private List<String> songTitles = new ArrayList<String>();
 	
-	public Album(Integer albumId, String title, Integer year, Band band,
-			Integer albumNumber) {
+	public Album(Integer albumId, String title, Integer year, Band band) {
 		super();
 		this.albumId = albumId;
 		this.title = title;
 		this.year = year;
 		this.band = band;
-		this.albumNumber = albumNumber;
 	}
 
 	public Album(String title, Integer year, String bandName) {
-		this(null, title, year, new Band(bandName), null);
+		this(null, title, year, new Band(bandName));
 	}
 	
 	public Album(Integer albumId, String title) {
@@ -42,10 +39,6 @@ public class Album {
 
 	public Integer getYear() {
 		return year;
-	}
-
-	public Integer getAlbumNumber() {
-		return albumNumber;
 	}
 
 	public Band getBand() {
