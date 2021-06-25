@@ -149,7 +149,7 @@ take the following steps.
 This process will launch a local (but bare bones) web server and should
 launch a basic web browser in Eclipse.  You can interact with your 
 webapp through eclipse or you can open your favorite web browser and 
-go to <http://localhost:8080/CSCE156-Lab06-JDBC/> to do so.
+go to <http://localhost:8080/CSCE156-Lab06-JDBC/> (try <http://localhost:8080/CSCE156-Lab09/> if that does not work) to do so.
 
 *   If your code is correct, the contents of your database should be
     displayed (after loading) in a table.  Clicking on an album title
